@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanjay Senthil - AI & Data Science Engineer Portfolio. Specializing in Machine Learning, Computer Vision, and Data Engineering.">
+  <title>Sanjay Senthil | AI & Data Science Engineer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styling -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>Sanjay<span class="logo-accent">.S /&gt;</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn btn-secondary">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-menu" id="closeMenu" aria-label="Close Menu">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link btn btn-primary">Contact</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="greeting-badge">
+            <span class="pulse-dot"></span> Available for Opportunities
+          </div>
+          <h1>Hi, I'm <span class="text-glow">Sanjay Senthil</span></h1>
+          <h2 class="typing-container">
+            I'm a <span id="typing-text"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-lead">
+            Results-driven AI & Data Science engineer with deep expertise in machine learning, computer vision, and scalable data engineering. Skilled in building end-to-end ML pipelines and deploying deep learning models.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">
+              Let's Connect <i data-lucide="arrow-right"></i>
+            </a>
+            <!-- Local fallback or absolute path for resume; user can replace this link when they host it -->
+            <a href="#" class="btn btn-outline" id="resumeBtn">
+              Download Resume <i data-lucide="download"></i>
+            </a>
+          </div>
+          <div class="social-icons">
+            <a href="https://linkedin.com/in/sanjay-senthil-367909308" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://github.com/sanjaysenthil17" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="mailto:ssanjaychakravar@gmail.com" aria-label="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="tel:+917200526305" aria-label="Phone">
+              <i data-lucide="phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Animated Code Window -->
+        <div class="hero-code-wrapper">
+          <div class="code-window">
+            <div class="window-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="window-title">sanjay_senthil.py</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="keyword">class</span> <span class="class-name">AIEngineer</span>:
+    <span class="keyword">def</span> <span class="function-name">__init__</span>(<span class="keyword">self</span>):
+        <span class="keyword">self</span>.name = <span class="string">"Sanjay Senthil"</span>
+        <span class="keyword">self</span>.title = <span class="string">"AI & Data Science Engineer"</span>
+        <span class="keyword">self</span>.location = <span class="string">"India"</span>
+        <span class="keyword">self</span>.focus_areas = [
+            <span class="string">"Machine Learning"</span>,
+            <span class="string">"Computer Vision"</span>,
+            <span class="string">"Scalable Data Pipelines"</span>
+        ]
+
+    <span class="keyword">def</span> <span class="function-name">get_core_stack</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> {
+            <span class="string">"languages"</span>: [<span class="string">"Python"</span>, <span class="string">"C++"</span>, <span class="string">"Scala"</span>, <span class="string">"SQL"</span>],
+            <span class="string">"libraries"</span>: [<span class="string">"PyTorch"</span>, <span class="string">"scikit-learn"</span>, <span class="string">"Spark"</span>, <span class="string">"OpenCV"</span>],
+            <span class="string">"cloud_tools"</span>: [<span class="string">"Azure"</span>, <span class="string">"Terraform"</span>, <span class="string">"Kafka"</span>, <span class="string">"Hadoop"</span>]
+        }
+
+    <span class="keyword">def</span> <span class="function-name">mission</span>(<span class="keyword">self</span>):
+        <span class="keyword">return</span> <span class="string">"Leverage AI to create meaningful, real-world impact."</span>
+
+<span class="comment"># Output: Ready to build the future</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">01.</span> About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an AI & Data Science engineer driven by a passion for solving complex, real-world problems. With a solid foundation in algorithm design and machine learning, I specialize in engineering production-grade deep learning models, high-performance computing, and scalable data ingestion pipelines.
+            </p>
+            <p>
+              My background spans academic research, competition-level programming, and industry internships where I applied statistical modeling and location-intelligent algorithms. I enjoy building end-to-end solutions, starting from raw data engineering up to deploying robust architectures.
+            </p>
+
+            <div class="education-block">
+              <h3><i data-lucide="graduation-cap"></i> Education</h3>
+              <div class="education-item">
+                <div class="education-header">
+                  <h4>Amrita Vishwa Vidyapeetham</h4>
+                  <span class="duration">Aug 2023 – Jul 2027</span>
+                </div>
+                <p class="education-sub">Bachelor of Technology in Artificial Intelligence and Data Science</p>
+                <ul class="education-bullets">
+                  <li>Collaborated on academic lab projects, implementing algorithms for deep learning, NLP, and computer vision from scratch using PyTorch and scikit-learn.</li>
+                  <li>Participated in competitive hackathons and department symposiums, representing the university in algorithm design and machine learning contests.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cards">
+            <!-- Achievements Card -->
+            <div class="achievement-card glow-purple">
+              <div class="card-icon"><i data-lucide="award"></i></div>
+              <h3>Achievements</h3>
+              <ul class="achievement-list">
+                <li>
+                  <strong>IEEE YESIST12 2026 Finalist</strong>
+                  <span>Selected among 2,000+ global submissions for final round of Innovation Challenge. Project: Quantum-Enabled Capacity Expansion Planning for Resilient Green Grids.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Certifications Card -->
+            <div class="achievement-card glow-cyan">
+              <div class="card-icon"><i data-lucide="shield-check"></i></div>
+              <h3>Certifications</h3>
+              <ul class="cert-list">
+                <li>
+                  <div class="cert-title">Career Essentials in Generative AI</div>
+                  <div class="cert-meta">Microsoft & LinkedIn Learning</div>
+                </li>
+                <li>
+                  <div class="cert-title">Build Your Generative AI Productivity Skills</div>
+                  <div class="cert-meta">Microsoft & LinkedIn Learning</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">02.</span> Technical Skills</h2>
+        <p class="section-subtitle">Here are the technologies, programming languages, and tools I specialize in:</p>
+
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i data-lucide="code-2"></i>
+              <h3>Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Scala</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <!-- Libraries & Frameworks -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i data-lucide="cpu"></i>
+              <h3>Libraries & Frameworks</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">scikit-learn</span>
+              <span class="skill-tag">Spark Streaming</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Seaborn</span>
+              <span class="skill-tag">Librosa</span>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="skill-category">
+            <div class="category-header">
+              <i data-lucide="terminal"></i>
+              <h3>Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">Terraform</span>
+              <span class="skill-tag">Microsoft Azure</span>
+              <span class="skill-tag">Hadoop</span>
+              <span class="skill-tag">HDFS</span>
+              <span class="skill-tag">Kafka</span>
+              <span class="skill-tag">OpenMP</span>
+              <span class="skill-tag">MPI</span>
+              <span class="skill-tag">Linux / Bash</span>
+              <span class="skill-tag">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">03.</span> Work Experience</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glow-purple">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role">Data Science Intern</h3>
+                  <span class="company">Cognifyz Technologies</span>
+                </div>
+                <div class="timeline-meta">
+                  <span class="duration">Dec 2025 – Jan 2026</span>
+                  <span class="type">Remote</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Engineered a restaurant rating prediction regression model (Random Forest, Gradient Boosting) using scikit-learn, achieving a Test R² of 0.52 and RMSE of 0.68, while eliminating data leakage by removing post-facto variables.</li>
+                <li>Developed a location-intelligent content-based recommendation system using a multi-criteria ranking algorithm (weighted by rating, popularity, budget) and the Haversine formula to compute distance.</li>
+                <li>Conducted location-based exploratory data analysis (EDA) across 15 cities, segmenting pricing zones and identifying a 27% online delivery service gap to advise expansion strategies.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">scikit-learn</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">Gradient Boosting</span>
+                <span class="tag">EDA</span>
+                <span class="tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">04.</span> Featured Projects</h2>
+        <p class="section-subtitle">A collection of systems I have built involving AI, computer vision, and high performance computing.</p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icons">
+                <i data-lucide="folder" class="folder-icon"></i>
+                <a href="https://github.com/sanjaysenthil17" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="GitHub Repository">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+              <h3 class="project-name">Real-Time Multimodal Emotion Detection</h3>
+            </div>
+            <div class="project-description">
+              <p>Built a real-time multimodal emotion detection system achieving 30+ FPS for 9-class facial expression recognition using a hybrid YOLO + Vision Transformer (ViT) architecture.</p>
+              <p>Improved data ingestion throughput by 8.5× by designing a Spark Structured Streaming Medallion pipeline (Bronze/Silver/Gold) on HDFS and converting raw images to Snappy Parquet using Scala.</p>
+            </div>
+            <div class="project-tags">
+              <span>YOLO</span>
+              <span>Vision Transformer (ViT)</span>
+              <span>Scala</span>
+              <span>Spark Streaming</span>
+              <span>HDFS</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icons">
+                <i data-lucide="folder" class="folder-icon"></i>
+                <a href="https://github.com/sanjaysenthil17" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="GitHub Repository">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+              <h3 class="project-name">Music Emotion Recognition</h3>
+            </div>
+            <div class="project-description">
+              <p>Developed an end-to-end music emotion recognition system in PyTorch, achieving 89.83% test accuracy and 93.62% validation accuracy on an 8-class Valence-Arousal dataset containing 10,812 samples.</p>
+              <p>Enhanced model generalization by 14% through a hybrid CNN-HuBERT architecture combining MFCC features with pretrained speech embeddings and data augmentation techniques.</p>
+            </div>
+            <div class="project-tags">
+              <span>PyTorch</span>
+              <span>HuBERT</span>
+              <span>Librosa</span>
+              <span>CNN</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icons">
+                <i data-lucide="folder" class="folder-icon"></i>
+                <a href="https://github.com/sanjaysenthil17" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="GitHub Repository">
+                  <i data-lucide="github"></i>
+                </a>
+              </div>
+              <h3 class="project-name">Monte Carlo Supply Chain Simulation</h3>
+            </div>
+            <div class="project-description">
+              <p>Developed a high-performance Monte Carlo simulation engine in C++ to model stochastic inventory dynamics across 52 planning periods, reducing forecasted inventory costs by 18%.</p>
+              <p>Accelerated execution by 15× for 100,000+ simulations by parallelizing workloads across a multi-node Azure VM cluster using OpenMPI and provisioning infrastructure with Terraform.</p>
+            </div>
+            <div class="project-tags">
+              <span>C++</span>
+              <span>OpenMPI</span>
+              <span>Terraform</span>
+              <span>Azure VM</span>
+              <span>scikit-learn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="section-container">
+        <h2 class="section-title"><span class="number">05.</span> Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Let's Collaborate</h3>
+            <p>
+              I am currently seeking opportunities where I can apply my skills in Machine Learning, Computer Vision, and scalable Data Science to solve challenging problems. 
+            </p>
+            <p>
+              Whether you have an internship/job opportunity, want to discuss a project, or just want to connect, feel free to send a message!
+            </p>
+            
+            <div class="contact-links">
+              <div class="contact-item">
+                <i data-lucide="mail"></i>
+                <a href="mailto:ssanjaychakravar@gmail.com">ssanjaychakravar@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i data-lucide="phone"></i>
+                <a href="tel:+917200526305">+91-7200526305</a>
+              </div>
+              <div class="contact-item">
+                <i data-lucide="map-pin"></i>
+                <span>Coimbatore / India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <!-- Setup with standard Formspree or email client fallback -->
+            <form action="https://formspree.io/f/placeholder" method="POST" class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Project Collaboration">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message <i data-lucide="send"></i></button>
+            </form>
+            <div id="formStatus" class="form-status"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/sanjay-senthil-367909308" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+        <a href="https://github.com/sanjaysenthil17" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+        <a href="mailto:ssanjaychakravar@gmail.com"><i data-lucide="mail"></i></a>
+      </div>
+      <p class="copyright">&copy; 2026 Sanjay Senthil. Built with HTML, CSS, and JS.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
